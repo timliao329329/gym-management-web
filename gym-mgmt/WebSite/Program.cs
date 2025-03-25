@@ -1,3 +1,6 @@
+using GymDbContext;
+using Microsoft.EntityFrameworkCore;
+
 namespace WebSite
 {
     public class Program
@@ -8,6 +11,8 @@ namespace WebSite
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<GymDbContext.GymDbContext>();
 
             var app = builder.Build();
 
